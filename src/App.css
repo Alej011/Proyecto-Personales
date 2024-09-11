@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin: 0;
 }
 
 .App-logo {
@@ -14,18 +15,34 @@
 }
 
 .App-header {
+  margin: 0;
+  padding: 0;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin-bottom: 2rem;
 }
 
 .App-link {
+  margin-top: 1rem;
   color: #61dafb;
+  text-decoration: none;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  box-shadow: 4px 4px 10px rgba(82, 77, 77, 0.966); 
+  transition: transform .1s ease-in-out;
+  &:hover,
+  &.active {
+    background-color: #31869e;
+    transform: scale(1.1);
+    color: white;
+  }
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +52,96 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Navegacion-Principal {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .Navegacion-Principal {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+}
+
+.Navegacion-Principal a {
+  margin-bottom: 1rem; 
+  display: block;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1rem;
+  border-radius: 1.5rem; 
+  transition: transform .1s ease-in-out;
+  &:hover,
+  &.active {
+    background-color: #894fbe;
+    transform: scale(1.1);
+  }
+}
+
+.Navegacion-Principal a:hover {
+  background-color: #6bc3f7;
+}
+
+.Button {
+  display: block;
+  margin: 0 auto;
+  background-color: #61dafb;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); 
+  border: none;
+  margin-bottom: 2rem;
+  color: white;
+  transition: transform .1s ease-in-out;
+  &:hover,
+  &.active {
+    background-color: #894fbe;
+    transform: scale(1.1);
+  }
+}
+
+.contenido-api{
+  display: grid;
+  grid-template-columns: 1fr;
+  list-style: none;
+  margin-top: 1rem;
+  background-color: #282c34;
+  color: white;
+  padding: 1rem;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+    .contenido-api{
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+}
+
+.contenido-api li {
+  margin-top: 2rex;
+  text-align: justify;
+}
+
+.mensaje-emergente {
+  display: inline-block; /*Este nos ayuda a que el div ocupe el ancho necesario para su contenido*/
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: #282c34;
+  color: #61dafb;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
 }
